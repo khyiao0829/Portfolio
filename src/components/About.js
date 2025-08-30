@@ -19,7 +19,6 @@ function About() {
       style={{ backgroundColor: '#ffffff' }}
     >
       <div className="relative z-10">
-        {/* 프로필 */}
         <div className="flex flex-col md:flex-row items-start md:items-center gap-10 mb-12 max-w-xl mx-auto">
           
           <div className="flex-1">
@@ -34,10 +33,8 @@ function About() {
           </div>
         </div>
 
-        {/* 구분선 */}
         <hr className="border-gray-300 mb-12" />
 
-        {/* 학력 타임라인 */}
         <div className="max-w-3xl mx-auto mb-16 px-4 text-left">
           <h2 className="text-2xl font-semibold text-center mb-6">学歴</h2>
           <ul className="space-y-6 border-l-2 border-blue-500 pl-6">
@@ -53,7 +50,6 @@ function About() {
           </ul>
         </div>
 
-        {/* 스킬과 프레임워크 카드 */}
         <div className="max-w-4xl mx-auto mb-16 px-4 grid md:grid-cols-2 gap-10">
           <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition">
             <h2 className="text-xl font-semibold text-center mb-4">プログラミング言語</h2>
@@ -65,7 +61,6 @@ function About() {
           </div>
         </div>
 
-        {/* 프로젝트 카드 */}
         <div className="max-w-3xl mx-auto mb-16 px-4 text-left">
           <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition">
             <h2 className="text-xl font-semibold text-center mb-4">プロジェクト</h2>
