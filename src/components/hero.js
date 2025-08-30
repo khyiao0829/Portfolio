@@ -13,7 +13,7 @@ function Hero() {
         こんにちは,
       </motion.div>
       <motion.p
-        className="font-sans text-4xl font-bold mt-7 "
+        className="font-sans text-4xl font-bold mt-12 "
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.8 }}
