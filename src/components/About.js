@@ -45,7 +45,7 @@ function About() {
               <span className="font-semibold">2019年 3月</span> - Sangmyung University ソフトウェア学科入学
             </li>
             <li>
-              <span className="font-semibold">2024年 2月</span> - 卒業
+              <span className="font-semibold">2024年 2月</span> - Sangmyung University ソフトウェア学科卒業
             </li>
           </ul>
         </div>

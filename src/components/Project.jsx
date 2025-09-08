@@ -1,4 +1,4 @@
-// src/components/Project.jsx
+
 import { Link } from 'react-router-dom';
 import projects from './ProjectData';
 
@@ -19,15 +19,14 @@ function Project() {
             <h3 className="text-xl font-semibold mb-2 text-gray-900">{proj.title}</h3>
             <p className="text-gray-700 text-sm mb-4">{proj.description}</p>
 
-            {/* 아이콘과 태그 표시 */}
             <div className="flex flex-wrap gap-2">
               {proj.tags.map((tag, idx) => (
                 <div
                   key={idx}
                   className="flex items-center gap-1 bg-gray-100 px-2 py-1 rounded"
                 >
-                  {tag.icon} {/* 아이콘 */}
-                  <span className="text-sm">{tag.name}</span> {/* 이름 */}
+                  {tag.icon} 
+                  <span className="text-sm">{tag.name}</span> 
                 </div>
               ))}
             </div>

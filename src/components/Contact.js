@@ -18,8 +18,8 @@ function Contact() {
           </a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/username/" target="_blank" className="text-blue-600 hover:underline">
-            🔗 LinkedIn
+          <a href="https://engineerkhy.tistory.com" target="_blank" className="text-blue-600 hover:underline">
+            🔗 技術記録ブログ
           </a>
         </li>
       </ul>
