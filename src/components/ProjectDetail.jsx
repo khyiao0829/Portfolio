@@ -14,6 +14,7 @@ const projects = [
     title: "バイトシフト調整Web/アプリサイト",
     description: "アルバイトのシフトを調整する簡単なウェブアプリです。Firebase認証を含みます。",
     tags: ["React", "Firebase"],
+    github: "https://github.com/khyiao0829/shift-management-app",
   },
   {
     id: "3",
@@ -69,7 +70,7 @@ function ProjectDetail() {
             rel="noopener noreferrer"
             className="inline-block mb-4 px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-900 transition"
           >
-            GitHubリポジトリを見る
+            GitHub
           </a>
         )}
 
