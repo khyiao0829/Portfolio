@@ -5,21 +5,23 @@ const projects = [
   {
     id: "1",
     title: "生成型AIを活用したNHK学習アプリ",
-    description: "OpenAI 기반 일본어 뉴스 콘텐츠로 학습할 수 있는 교육용 앱입니다。",
-    tags: ["OpenAI API", "React-native", "NodeJS", "ExpressJS", "MongoDB"],
+    description: "OpenAIを利用した日本語ニュースコンテンツで学習できる教育用アプリです。",
+    tags: ["OpenAI API", "React Native", "NodeJS", "ExpressJS", "MongoDB"],
     github: "https://github.com/khyiao0829/Newnihon",
   },
   {
     id: "2",
     title: "バイトシフト調整Web/アプリサイト",
-    description: "알바 스케줄 조정을 위한 간단한 웹앱입니다。Firebase 인증 포함。",
+    description: "アルバイトのシフトを調整する簡単なウェブアプリです。Firebase認証を含みます。",
     tags: ["React", "Firebase"],
   },
   {
     id: "3",
-    title: "繊維会社のサイト制作中",
-    description: "섬유 기업을 위한 홈페이지 제작 프로젝트 진행 중입니다。",
-    tags: ["HTML", "CSS", "React"],
+    title: "個人ポートフォリオサイト",
+    description: "Reactで作成したポートフォリオサイトで、Vercelを使用して実際にユーザーがアクセス可能です。",
+    tags: ["React", "HTML", "CSS"],
+    github: "https://github.com/khyiao0829/portfolio",
+    demo: "https://portfolio-puce-ten-wevoujoub3.vercel.app",
   },
 ];
 
@@ -65,14 +67,26 @@ function ProjectDetail() {
             href={project.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block mb-12 px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-900 transition"
+            className="inline-block mb-4 px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-900 transition"
           >
-            GitHub リポジトリを見る
+            GitHubリポジトリを見る
           </a>
         )}
 
-        {/* NHK 학습 앱(id=2)일 경우 PDF 표시 */}
-        {project.id === "2" && (
+        {/* 데모 링크 버튼 (포트폴리오 사이트용) */}
+        {project.demo && (
+          <a
+            href={project.demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mb-12 ml-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition"
+          >
+            デモサイトを見る
+          </a>
+        )}
+
+        {/* NHK 학습 앱(id=1)일 경우 PDF 표시 */}
+        {project.id === "1" && (
           <div className="mt-8">
             <h2 className="text-xl font-bold mb-4">アプリ紹介PDF</h2>
             <div className="w-full flex justify-center overflow-hidden">

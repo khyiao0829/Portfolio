@@ -1,5 +1,4 @@
 import { useInView } from 'react-intersection-observer';
-import profileImg from './assets/profile_image.jpg';
 import TechSkills from './TechSkills';
 import Framework from './Framework';
 
@@ -65,10 +64,9 @@ function About() {
           <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition">
             <h2 className="text-xl font-semibold text-center mb-4">プロジェクト</h2>
             <ul className="list-disc list-inside text-gray-700 space-y-3">
-              <li>LSTMを活用した株式価格予測 (딥러닝 + Python)</li>
-              <li>生成型人工知能を活用したNHKニュースベースの学習アプリ(OpenAI API + React + Firebase)</li>
+              <li>生成型人工知能を活用したNHKニュースベースの学習アプリ(OpenAI API + React + MongoDB)</li>
               <li>バイトシフト調整Web/アプリサイト(React + Firebase)</li>
-              <li>繊維会社のサイト制作中</li>
+              <li>個人ポートフォリオサイト</li>
             </ul>
           </div>
         </div>
