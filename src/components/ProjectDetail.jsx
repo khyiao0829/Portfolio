@@ -4,25 +4,19 @@ import { AiOutlineArrowLeft } from "react-icons/ai";
 const projects = [
   {
     id: "1",
-    title: "LSTMを活用した株式価格予測",
-    description: "학부생 시절, 빅데이터 수업 시간의 딥러닝 기반 시계열 예측 모델을 통해 주가 흐름을 분석한 프로젝트입니다。",
-    tags: ["Python", "LSTM", "Deep Learning"],
-  },
-  {
-    id: "2",
     title: "生成型AIを活用したNHK学習アプリ",
     description: "OpenAI 기반 일본어 뉴스 콘텐츠로 학습할 수 있는 교육용 앱입니다。",
     tags: ["OpenAI API", "React-native", "NodeJS", "ExpressJS", "MongoDB"],
     github: "https://github.com/khyiao0829/Newnihon",
   },
   {
-    id: "3",
+    id: "2",
     title: "バイトシフト調整Web/アプリサイト",
     description: "알바 스케줄 조정을 위한 간단한 웹앱입니다。Firebase 인증 포함。",
     tags: ["React", "Firebase"],
   },
   {
-    id: "4",
+    id: "3",
     title: "繊維会社のサイト制作中",
     description: "섬유 기업을 위한 홈페이지 제작 프로젝트 진행 중입니다。",
     tags: ["HTML", "CSS", "React"],
@@ -105,7 +99,7 @@ function ProjectDetail() {
         </button>
       </div>
 
-      {/* 반응형 스타일: 모바일에서 scale 조금 더 줄이기 */}
+      {/* 반응형 스타일: 모바일에서 scale 줄이기 */}
       <style>
         {`
           @media (max-width: 768px) {
