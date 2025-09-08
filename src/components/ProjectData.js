@@ -1,4 +1,4 @@
-import { SiPython, SiReact, SiFirebase, SiHtml5, SiCss3 } from 'react-icons/si';
+import { SiPython, SiReact, SiFirebase, SiHtml5, SiCss3, SiMongodb } from 'react-icons/si';
 import { FaNodeJs } from 'react-icons/fa';
 
 const projects = [
@@ -17,10 +17,10 @@ const projects = [
     description: "OpenAI 기반 일본어 뉴스 콘텐츠로 학습할 수 있는 교육용 앱입니다。",
     tags: [
       { name: "React Native", icon: <SiReact size={24} color="#61DAFB" /> },
-      { name: "NodeJS", icon: <FaNodeJs size={24} color="#339933" /> }, // 변경
-      { name: "Firebase", icon: <SiFirebase size={24} color="#FFCA28" /> },
+      { name: "NodeJS", icon: <FaNodeJs size={24} color="#339933" /> },
+      { name: "MongoDB", icon: <SiMongodb size={24} color="#47A248" /> },
     ],
-    detail: "일본어 뉴스(NHK)를 기반으로 GPT 응답을 받아 사용자 맞춤 학습을 제공하는 앱입니다. Firebase 인증 기능과 챗 UI 포함."
+    detail: "일본어 뉴스(NHK)를 기반으로 GPT 응답을 받아 사용자 맞춤 학습을 제공하는 앱입니다. MongoDB 데이터베이스와 챗 UI 포함."
   },
   {
     id: "3",
