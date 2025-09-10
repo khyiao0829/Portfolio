@@ -11,7 +11,6 @@ function Hero() {
     >
       <div className="absolute inset-0 bg-black/40"></div>
 
-      {/* 내용 */}
       <div className="relative z-10">
         <motion.div
           className="font-sans text-4xl sm:text-5xl md:text-6xl font-bold"
