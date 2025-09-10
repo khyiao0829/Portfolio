@@ -1,74 +1,43 @@
-import { useInView } from 'react-intersection-observer';
-import TechSkills from './TechSkills';
-import Framework from './Framework';
-
 function About() {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
   return (
-        <section
-      ref={ref}
-      id="about"
-      className={`max-w-5xl mx-auto p-8 transition-opacity duration-700 rounded-xl border border-gray-200 shadow-lg ${
-        inView ? 'opacity-100' : 'opacity-0'
-      }`}
-      style={{ backgroundColor: '#ffffff' }}
-    >
-      <div className="relative z-10">
-        <div className="flex flex-col md:flex-row items-start md:items-center gap-10 mb-12 max-w-xl mx-auto">
-          
-          <div className="flex-1">
-            <h1 className="text-4xl md:text-5xl font-extrabold mb-2">KIM HA-YEONG</h1>
-            <p className="text-blue-600 font-semibold mb-4">Web/App Engineer</p>
-            <p className="text-gray-700 leading-relaxed mb-2 text-center">
-              挑戦を通じて学び、成長を楽しむ開発者です。
-            </p>
-            <p className="text-gray-700 leading-relaxed mb-2 text-center">
-              新しい技術を探求し、ユーザーに価値あるサービスを届けます。
-            </p>
-          </div>
+    <section id="about" data-theme="light" className="max-w-5xl mx-auto py-20 px-6">
+
+      <div className="text-center mb-12">
+      <p className="text-sm font-bold font-medium text-blue-500 mt-12">プロフィール</p>
+      <h2 className="text-4xl font-bold">About Me</h2>
+    </div>
+      
+      <div className="flex flex-col md:flex-row items-center bg-white shadow-lg rounded-lg overflow-hidden">
+        {/* 프로필 사진 */}
+        <div className="md:w-1/3 flex justify-center p-6">
+          <img
+            src="/profile.jpg"
+            alt="Profile"
+            className="w-48 h-64 object-cover rounded shadow-md"
+          />
         </div>
 
-        <hr className="border-gray-300 mb-12" />
-
-        <div className="max-w-3xl mx-auto mb-16 px-4 text-left">
-          <h2 className="text-2xl font-semibold text-center mb-6">学歴</h2>
-          <ul className="space-y-6 border-l-2 border-blue-500 pl-6">
-            <li>
-              <span className="font-semibold">2017年 2月</span> - 大谷高等学校卒業
-            </li>
-            <li>
-              <span className="font-semibold">2019年 3月</span> - Sangmyung University ソフトウェア学科入学
-            </li>
-            <li>
-              <span className="font-semibold">2024年 2月</span> - Sangmyung University ソフトウェア学科卒業
-            </li>
-          </ul>
-        </div>
-
-        <div className="max-w-4xl mx-auto mb-16 px-4 grid md:grid-cols-2 gap-10">
-          <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition">
-            <h2 className="text-xl font-semibold text-center mb-4">プログラミング言語</h2>
-            <TechSkills />
-          </div>
-          <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition">
-            <h2 className="text-xl font-semibold text-center mb-4">フレームワーク・データベース</h2>
-            <Framework />
-          </div>
-        </div>
-
-        <div className="max-w-3xl mx-auto mb-16 px-4 text-left">
-          <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition">
-            <h2 className="text-xl font-semibold text-center mb-4">プロジェクト</h2>
-            <ul className="list-disc list-inside text-gray-700 space-y-3">
-              <li>生成型人工知能を活用したNHKニュースベースの学習アプリ(OpenAI API + React + MongoDB)</li>
-              <li>バイトシフト調整Web/アプリサイト(React + Firebase)</li>
-              <li>個人ポートフォリオサイト</li>
-            </ul>
-          </div>
+        {/* 소개  */}
+        <div className="md:w-2/3 p-8 space-y-4 text-gray-700 mb-12">
+          <p>
+            韓国の4年制大学で<strong className="font-semibold">ソフトウェア</strong>を専攻し、
+            Spring Boot、MySQL、ネットワーク、OpenGL、ウェブサーバープログラミングなど
+            幅広く学びました。卒業研究では<strong className="font-semibold">
+            ChatGPT API</strong>を活用した日本語学習アプリを約1年間かけて開発しました。
+          </p>
+          <p>
+            現在は<strong className="font-semibold">ワーキングホリデー</strong>で日本に滞在し、
+            飲食店のアルバイトを通じて<strong className="font-semibold">
+            日本語コミュニケーション力</strong>や<strong className="font-semibold">
+            チームワーク</strong>を実践的に身につけ、日本の職場文化にも適応しています。
+          </p>
+          <p>
+            学業や個人開発を通じて<strong className="font-semibold">
+            1年以上ウェブ開発</strong>を継続的に学習・実践しており、
+            将来的には<strong className="font-semibold">
+            フルスタック開発者</strong>として成長するため、
+            新しい技術の習得に熱心に取り組んでいます。
+          </p>
         </div>
       </div>
     </section>

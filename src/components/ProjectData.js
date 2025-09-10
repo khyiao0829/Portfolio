@@ -1,4 +1,4 @@
-import { SiReact, SiFirebase, SiHtml5, SiCss3, SiMongodb } from 'react-icons/si';
+import { SiReact, SiFirebase, SiHtml5, SiCss3, SiMongodb, SiOpenai } from 'react-icons/si';
 import { FaNodeJs } from 'react-icons/fa';
 
 const projects = [
@@ -9,6 +9,8 @@ const projects = [
     tags: [
       { name: "React Native", icon: <SiReact size={24} color="#61DAFB" /> },
       { name: "NodeJS", icon: <FaNodeJs size={24} color="#339933" /> },
+      { name: "MongoDB", icon: <SiMongodb size={24} color="#47A248" /> },
+      { name: "OpenAI API", icon: <SiOpenai className="text-purple-600" />},
       { name: "MongoDB", icon: <SiMongodb size={24} color="#47A248" /> },
     ],
     detail: "NHKの日本語ニュースを基に、GPTの応答を受けてユーザーに合わせた学習を提供するアプリです。MongoDBデータベースとチャットUIを含みます。"

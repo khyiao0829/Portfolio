@@ -18,7 +18,7 @@ export default function ScrollDownArrow() {
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-8 w-8 text-black mx-auto"
+        className="h-8 w-8 text-white mx-auto"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"

@@ -1,5 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { AiOutlineArrowLeft } from "react-icons/ai";
+import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt } from "react-icons/fa";
+import { SiOpenai, SiMongodb, SiExpress, SiFirebase } from "react-icons/si";
 
 const projects = [
   {
@@ -14,7 +16,7 @@ const projects = [
     title: "バイトシフト調整Web/アプリサイト",
     description: "アルバイトのシフトを調整する簡単なウェブアプリです。Firebase認証を含みます。",
     tags: ["React", "Firebase"],
-    github: "https://github.com/khyiao0829/shift-management-app",
+    github: "https://github.com/khyiao0829/shift-management-app"
   },
   {
     id: "3",
@@ -25,6 +27,19 @@ const projects = [
     demo: "https://portfolio-puce-ten-wevoujoub3.vercel.app",
   },
 ];
+
+// 기술스택과 아이콘 매핑
+const tagIcons = {
+  "React": <FaReact className="text-blue-500" />,
+  "React Native": <FaReact className="text-cyan-500" />,
+  "NodeJS": <FaNodeJs className="text-green-600" />,
+  "ExpressJS": <SiExpress className="text-gray-700" />,
+  "MongoDB": <SiMongodb className="text-green-700" />,
+  "OpenAI API": <SiOpenai className="text-purple-600" />,
+  "Firebase": <SiFirebase className="text-yellow-500" />,
+  "HTML": <FaHtml5 className="text-orange-600" />,
+  "CSS": <FaCss3Alt className="text-blue-600" />,
+};
 
 function ProjectDetail() {
   const { id } = useParams();
@@ -51,18 +66,18 @@ function ProjectDetail() {
       <div className="fonts-sans max-w-4xl mx-auto p-8 bg-white rounded-lg shadow-md relative">
         <h1 className="text-3xl font-bold mb-4">{project.title}</h1>
         <p className="mb-6 text-gray-700">{project.description}</p>
-        <div className="flex flex-wrap gap-2 text-blue-600 font-semibold mb-6">
+        
+        {/* 기술 스택 아이콘 나열 */}
+        <div className="flex flex-wrap gap-4 mb-6">
           {project.tags.map((tag, idx) => (
-            <span
-              key={idx}
-              className="bg-blue-100 px-3 py-1 rounded-full border border-blue-300"
-            >
-              {tag}
-            </span>
+            <div key={idx} className="flex items-center gap-2 px-3 py-2 bg-gray-100 rounded-lg shadow-sm">
+              {tagIcons[tag] || <span className="text-gray-500">?</span>}
+              <span className="text-sm font-semibold">{tag}</span>
+            </div>
           ))}
         </div>
 
-        {/* GitHub 링크 버튼 */}
+        {/* GitHub 버튼 */}
         {project.github && (
           <a
             href={project.github}
@@ -74,7 +89,7 @@ function ProjectDetail() {
           </a>
         )}
 
-        {/* 데모 링크 버튼 (포트폴리오 사이트용) */}
+        {/* 데모 사이트 버튼 */}
         {project.demo && (
           <a
             href={project.demo}
@@ -86,7 +101,7 @@ function ProjectDetail() {
           </a>
         )}
 
-        {/* NHK 학습 앱(id=1)일 경우 PDF 표시 */}
+        {/* PDF 표시 */}
         {project.id === "1" && (
           <div className="mt-8">
             <h2 className="text-xl font-bold mb-4">アプリ紹介PDF</h2>
@@ -113,18 +128,6 @@ function ProjectDetail() {
           <AiOutlineArrowLeft /> 戻る
         </button>
       </div>
-
-      {/* 반응형 스타일: 모바일에서 scale 줄이기 */}
-      <style>
-        {`
-          @media (max-width: 768px) {
-            iframe {
-              transform: scale(0.8) !important;
-              height: 80vh !important;
-            }
-          }
-        `}
-      </style>
     </div>
   );
 }
