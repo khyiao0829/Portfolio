@@ -1,60 +1,79 @@
 function Experience() {
-  const education = [
-    {
-      year: "2017年2月",
-      title: "🇰🇷大谷高等学校卒業",
-    },
-    {
-      year: "2019年4月 – 2024年2月",
-      title: "🇰🇷Sangmyung University - ソフトウェア専攻",
-      description: "Spring Boot、MySQL、OpenGL、ネットワーク、ウェブサーバープログラミングなど幅広く学習。",
-    },
-    {
-      year: "2023年３月 – 2024年12月",
-      title: "卒業研究（チーム開発）",
-      description: "ChatGPT APIを活用した日本語学習アプリを約1年間かけて開発。",
-    },
-  ];
-
-  const work = [
-    {
-      year: "2024年4月 – 現在",
-      title: "飲食店アルバイト - 東京都",
-      description: "接客を通じて日本語コミュニケーション力を強化し、チームワークを実践的に習得。",
-    },
-  ];
-
   return (
     <section id="experience" className="bg-gray-50 py-20 px-6">
-        <div className="max-w-3xl mx-auto mb-16">
-          <p className="text-md font-bold font-medium text-blue-500 text-center mt-12">経歴</p>
-      <h2 className="text-4xl font-bold text-center mb-4">Experience</h2>
+      <div className="text-center mb-12">
+      <p className="text-sm font-bold font-medium text-blue-500 mt-12">履歴</p>
+      <h2 className="text-4xl font-bold">Experience</h2>
     </div>
-      {/* 학력 */}
-      <div className="max-w-3xl mx-auto mb-2">
-        <h3 className="text-2xl font-semibold mb-4">学歴</h3>
-        <div className="relative border-l-4 border-green-500 pl-6">
-          {education.map((item, idx) => (
-            <div key={idx} className="mb-10">
-              <span className="text-sm text-gray-500">{item.year}</span>
-              <h4 className="text-xl font-semibold">{item.title}</h4>
-              <p className="text-gray-700 mt-1">{item.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
+      <div className="max-w-4xl mx-auto space-y-16">
+        {/* 학력/자격증 2컬럼 */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          {/* 학력 */}
+          <div>
+            <h3 className="text-2xl font-semibold mb-6 border-b-2 border-black w-full md:w-1/8">
+              学歴
+            </h3>
+            <ul className="space-y-6">
+              <li>
+                <span className="block text-sm text-gray-600 font-medium">
+                  2017年2月
+                </span>
+                <p className="text-md font-semibold">🇰🇷大谷高等学校卒業 </p>
+              </li>
+              <li>
+                <span className="block text-sm text-gray-600 font-medium">
+                  2019年3月 - 2024年2月
+                </span>
+                <p className="text-md font-semibold">🇰🇷Sangmyung University ソフトウェア工学専攻</p>
+              </li>
+            </ul>
+          </div>
 
-      {/* 경력 */}
-      <div className="max-w-3xl mx-auto">
-        <h3 className="text-2xl font-semibold mb-4">経歴</h3>
-        <div className="relative border-l-4 border-blue-500 pl-6">
-          {work.map((item, idx) => (
-            <div key={idx} className="mb-10">
-              <span className="text-sm text-gray-500">{item.year}</span>
-              <h4 className="text-xl font-semibold">{item.title}</h4>
-              <p className="text-gray-700 mt-1">{item.description}</p>
-            </div>
-          ))}
+          {/* 자격증 */}
+          <div>
+            <h3 className="text-2xl font-semibold mb-6 border-b-2 border-black w-full md:w-1/8">
+              資格
+            </h3>
+            <ul className="space-y-6">
+              <li>
+                <span className="block text-sm text-gray-600 font-medium">2016年</span>
+                <p className="text-lg font-semibold">2種普通自動車運転免許</p>
+              </li>
+              <li>
+                <span className="block text-sm text-gray-600 font-medium">2025年</span>
+                <p className="text-gray-700">
+                  日本語能力試験 JLPT N2 (2025年12月 受験予定)
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* 경력 1컬럼*/}
+        <div>
+          <h3 className="text-2xl font-semibold mb-6 border-b-2 border-black w-full md:w-1/8">
+            職歴
+          </h3>
+          <ul className="space-y-6">
+            <li>
+              <span className="block text-sm text-gray-600 font-medium">
+                2025年4月 – 現在
+              </span>
+              <p className="text-lg font-semibold">🇯🇵アルバイト - 🌮ポカタコス中野店</p>
+              <p className="text-gray-700">
+                接客を通じて日本語コミュニケーション力を強化
+              </p>
+            </li>
+            <li>
+              <span className="block text-sm text-gray-600 font-medium">
+                2025年8月 – 現在
+              </span>
+              <p className="text-lg font-semibold">🇯🇵アルバイト - ☕️ドトールコーヒ東中野店</p>
+              <p className="text-gray-700">
+                接客を通じて日本語コミュニケーション力を強化し、チームワークを実践的に習得。
+              </p>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
