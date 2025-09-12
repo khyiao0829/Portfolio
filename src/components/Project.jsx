@@ -9,7 +9,7 @@ function Project() {
       
       <div className="max-w-4xl mx-auto px-6 py-16">
         <div className="text-center mb-12">
-      <p className="text-sm font-bold font-medium text-blue-500 mt-12">プロゼクト</p>
+          <p className="text-sm font-bold text-blue-500 mt-12">プロゼクト</p>
       <h2 className="text-4xl font-bold">Project</h2>
     </div>
 

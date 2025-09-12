@@ -5,7 +5,7 @@ function About() {
     >
 
       <div className="text-center mb-12">
-      <p className="text-sm font-bold font-medium text-blue-500 mt-12">プロフィール</p>
+      <p className="text-sm font-bold text-blue-500 mt-12">プロフィール</p>
       <h2 className="text-4xl font-bold">Profile</h2>
     </div>
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center bg-white shadow-lg rounded-lg overflow-hidden mb-36">
@@ -26,10 +26,8 @@ function About() {
             幅広く学びました。卒業研究ではChatGPT APIを活用した日本語学習アプリを約1年間かけて開発しました。
           </p>
           <p>
-            現在はワーキングホリデーで日本に滞在し、
-            アルバイトを通じて
-            日本語コミュニケーション力
-            チームワークを実践的に身につけ、日本の職場文化にも適応しています。
+            現在はワーキングホリデーで日本に滞在中。接客アルバイトを通して日本語での会話力やチームワークを鍛え、日本の職場文化にも自然に馴染んできました。  
+            勉強してきた技術と日本での経験を組み合わせ、これからはエンジニアとして新しい価値を生み出していきたいと考えています。
           </p>
         </div>
       </div>

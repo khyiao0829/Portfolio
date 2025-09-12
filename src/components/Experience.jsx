@@ -2,7 +2,7 @@ function Experience() {
   return (
     <section id="experience" className="bg-gray-50 py-20 px-6">
       <div className="text-center mb-12">
-      <p className="text-sm font-bold font-medium text-blue-500 mt-12">履歴</p>
+      <p className="text-sm font-bold text-blue-500 mt-12">履歴</p>
       <h2 className="text-4xl font-bold">Experience</h2>
     </div>
       <div className="max-w-4xl mx-auto space-y-16">
