@@ -21,7 +21,6 @@ function Contact() {
         >
           <FaEnvelope size={32} className="text-gray-800 mb-3" />
           <p className="font-semibold">Email</p>
-          <p className="text-sm text-gray-600">khy__0829@naver.com</p>
         </a>
 
         <a
@@ -32,15 +31,9 @@ function Contact() {
         >
           <FaGithub size={32} className="text-gray-800 mb-3" />
           <p className="font-semibold">GitHub</p>
-          <p className="text-sm text-gray-600">github.com/khyiao0829</p>
         </a>
 
       </div>
-
-      {/* Footer Message */}
-      <p className="text-center text-gray-500 text-sm mt-12">
-        いつでもお気軽にご連絡ください ✨
-      </p>
     </section>
   );
 }
