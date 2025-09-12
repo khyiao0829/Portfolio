@@ -6,7 +6,7 @@ function About() {
 
       <div className="text-center mb-12">
       <p className="text-sm font-bold font-medium text-blue-500 mt-12">プロフィール</p>
-      <h2 className="text-4xl font-bold">About Me</h2>
+      <h2 className="text-4xl font-bold">Profile</h2>
     </div>
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center bg-white shadow-lg rounded-lg overflow-hidden mb-36">
         {/* 프로필 사진 */}
@@ -22,7 +22,7 @@ function About() {
         <h2 className="text-4xl font-bold">KIM HA-YEONG</h2>
           <p>
             韓国の4年制大学でソフトウェアを専攻し、
-            Spring Boot、MySQL、ネットワーク、OpenGL、ウェブサーバープログラミングなど
+            Spring Boot、MySQL、ネットワーク、Computer Graphics、ウェブサーバープログラミングなど
             幅広く学びました。卒業研究ではChatGPT APIを活用した日本語学習アプリを約1年間かけて開発しました。
           </p>
           <p>
@@ -30,13 +30,6 @@ function About() {
             アルバイトを通じて
             日本語コミュニケーション力
             チームワークを実践的に身につけ、日本の職場文化にも適応しています。
-          </p>
-          <p>
-            学業や個人開発を通じて
-            1年以上ウェブ開発を継続的に学習・実践しており、
-            将来的には
-            フルスタック開発者として成長するため、
-            新しい技術の習得に熱心に取り組んでいます。
           </p>
         </div>
       </div>

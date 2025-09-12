@@ -69,9 +69,21 @@ function Experience() {
                 2025年8月 – 現在
               </span>
               <p className="text-lg font-semibold">🇯🇵アルバイト - ☕️ドトールコーヒ東中野店</p>
-              <p className="text-gray-700">
+              <p className="text-gray-700 mb-12">
                 接客を通じて日本語コミュニケーション力を強化し、チームワークを実践的に習得。
               </p>
+            </li>
+            <li>
+              <div className="mt-6 p-4 bg-yellow-50 border-l-4 border-yellow-400 rounded">
+      <p className="text-gray-800">
+        まだ直接的な実務経験はありませんが、アルバイトで培った
+        <span className="font-semibold"> コミュニケーション力 </span>や
+        <span className="font-semibold"> チームワーク </span>を活かしつつ、
+        個人の<span className="font-semibold"> サイドプロジェクト </span>で
+        実践的にスキルを磨いています。<br />
+        今後はエンジニアとして、これらの経験を仕事に結びつけていきたいと考えています。
+      </p>
+    </div>
             </li>
           </ul>
         </div>

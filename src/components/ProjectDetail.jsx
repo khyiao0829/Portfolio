@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt } from "react-icons/fa";
-import { SiOpenai, SiMongodb, SiExpress, SiFirebase } from "react-icons/si";
+import { SiOpenai, SiMongodb, SiExpress, SiFirebase,SiPython, SiPytorch, SiStreamlit, SiOpencv } from "react-icons/si";
 
 const projects = [
   {
@@ -26,9 +26,16 @@ const projects = [
     github: "https://github.com/khyiao0829/portfolio",
     demo: "https://portfolio-puce-ten-wevoujoub3.vercel.app",
   },
+  {
+    id: "4",
+    title: "Shibuya Crowd Analytics",
+    description: "YOLOv8とStreamlitを活用し、渋谷スクランブル交差点のYouTubeライブ映像を解析して人の数をリアルタイムにカウントするプロジェクト。Tiling・Global NMS・EMA・CLAHE前処理によって精度を改善しました。",
+    tags: ["Python", "YOLOv8", "Streamlit", "OpenCV"],
+    github: "https://github.com/khyiao0829/Shibuya-Crowd-Analytics",
+    demoImage: "/shibuya_demo.png",
+  },
 ];
 
-// 기술스택과 아이콘 매핑
 const tagIcons = {
   "React": <FaReact className="text-blue-500" />,
   "React Native": <FaReact className="text-cyan-500" />,
@@ -39,6 +46,10 @@ const tagIcons = {
   "Firebase": <SiFirebase className="text-yellow-500" />,
   "HTML": <FaHtml5 className="text-orange-600" />,
   "CSS": <FaCss3Alt className="text-blue-600" />,
+  "Python": <SiPython color="#3776AB" />,
+  "YOLOv8": <SiPytorch className="text-red-500" />,
+  "Streamlit": <SiStreamlit className="text-pink-500" />,
+  "OpenCV": <SiOpencv className="text-indigo-500" />,
 };
 
 function ProjectDetail() {
@@ -120,6 +131,20 @@ function ProjectDetail() {
             </div>
           </div>
         )}
+        {/* デモ画像 */}
+        {project.demoImage && (
+          <div className="mt-8">
+            <h2 className="text-xl font-bold mb-4">デモ画像</h2>
+            <div className="w-full flex justify-center">
+              <img
+                src={project.demoImage}
+                alt={`${project.title} demo`}
+                className="rounded-lg shadow-md max-h-[500px] object-contain"
+              />
+            </div>
+          </div>
+        )}
+
 
         <button
           onClick={() => navigate(-1)}

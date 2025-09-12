@@ -1,4 +1,4 @@
-import { SiReact, SiFirebase, SiMongodb, SiOpenai, SiExpress, SiJavascript } from 'react-icons/si';
+import { SiReact, SiFirebase, SiMongodb, SiOpenai, SiExpress, SiJavascript, SiPython, SiPytorch, SiStreamlit, SiOpencv  } from 'react-icons/si';
 import { FaNodeJs } from 'react-icons/fa';
 
 const projects = [
@@ -37,6 +37,18 @@ const projects = [
     ],
     detail: "自分のプロジェクト、技術スタック、配布済みアプリを一目で確認可能。GitHubおよびVercelの配布リンクを提供し、実務能力とコード確認が可能です。SPA構造とコンポーネント単位の設計経験も強調しています。",
   },
+  {
+  id: "4",
+  title: "Shibuya Crowd Analytics",
+  description: "YOLOv8とStreamlitを活用したリアルタイム群衆カウントプロジェクト。渋谷スクランブル交差点のYouTubeライブ映像を解析し、人の数を検出。Tiling・Global NMS・EMA・CLAHE前処理によって精度を改善しました。",
+  tags: [
+    { name: "Python", icon: <SiPython size={24} color="#3776AB" /> },
+    { name: "YOLOv8", icon: <SiPytorch size={24} color="#EE4C2C" /> },
+    { name: "Streamlit", icon: <SiStreamlit size={24} color="#FF4B4B" /> },
+    { name: "OpenCV", icon: <SiOpencv size={24} color="#5C3EE8" /> },
+  ],
+  detail: "渋谷スクランブル交差点のライブカメラを対象にしたリアルタイム群衆解析プロジェクトです。単純なYOLO検出から始め、遠方の人物が検出されない・夜間で精度が落ちるといった課題を確認しました。そこで入力解像度の調整、Tiling手法、Global NMS、EMAスムージング、CLAHE前処理といった段階的な改善を行い、昼夜どちらの環境でも人数カウントの精度を大幅に向上させました。最終的にはStreamlitダッシュボードで可視化し、ポートフォリオ用にまとめています。",
+},
 ]
 
 export default projects;
