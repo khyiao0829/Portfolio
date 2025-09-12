@@ -7,7 +7,7 @@ function Contact() {
       className="max-w-4xl mx-auto p-12 my-24 min-h-screen flex flex-col justify-center"
     >
       <div className="text-center mb-12">
-        <p className="text-sm font-bold text-blue-500 mt-12">お問い合わせ</p>
+        <p className="text-sm font-bold text-blue-500 ">お問い合わせ</p>
         <h2 className="text-4xl font-bold mb-4">Contact</h2>
         <p className="text-gray-700">
           ご質問やお仕事のご依頼は、下記の方法でご連絡ください。
@@ -15,17 +15,15 @@ function Contact() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-center">
-        {/* Email */}
         <a
-          href="mailto:your@email.com"
+          href="mailto:khy__0829@naver.com"
           className="flex flex-col items-center p-6 bg-white rounded-xl shadow hover:shadow-lg transition"
         >
-          <FaEnvelope size={32} className="text-blue-600 mb-3" />
+          <FaEnvelope size={32} className="text-gray-800 mb-3" />
           <p className="font-semibold">Email</p>
           <p className="text-sm text-gray-600">khy__0829@naver.com</p>
         </a>
 
-        {/* GitHub */}
         <a
           href="https://github.com/khyiao0829"
           target="_blank"

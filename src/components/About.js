@@ -10,7 +10,7 @@ function About() {
     </div>
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center bg-white shadow-lg rounded-lg overflow-hidden mb-36">
         {/* 프로필 사진 */}
-        <div className="md:w-1/3 flex justify-center p-6">
+        <div className="md:w-1/4 flex justify-center p-6">
           <img
             src="/profile.jpg"
             alt="Profile"
@@ -18,7 +18,7 @@ function About() {
           />
         </div>
         {/* 소개  */}
-        <div className="md:w-2/3 p-8 space-y-3 text-black">
+        <div className="md:w-3/4 p-8 space-y-3 text-black">
         <h2 className="text-4xl font-bold">KIM HA-YEONG</h2>
           <p>
             韓国の4年制大学でソフトウェアを専攻し、

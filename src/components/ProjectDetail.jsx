@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { AiOutlineArrowLeft } from "react-icons/ai";
-import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt } from "react-icons/fa";
-import { SiOpenai, SiMongodb, SiExpress, SiFirebase,SiPython, SiPytorch, SiStreamlit, SiOpencv } from "react-icons/si";
+import { FaReact, FaNodeJs, FaGithub } from "react-icons/fa";
+import { SiOpenai, SiMongodb, SiExpress, SiFirebase, SiJavascript, SiPython, SiPytorch, SiStreamlit, SiOpencv, SiVercel } from "react-icons/si";
 
 const projects = [
   {
@@ -15,14 +15,14 @@ const projects = [
     id: "2",
     title: "バイトシフト調整Web/アプリサイト",
     description: "アルバイトのシフトを調整する簡単なウェブアプリです。Firebase認証を含みます。",
-    tags: ["React", "Firebase"],
+    tags: ["React", "JavaScript","Firebase"],
     github: "https://github.com/khyiao0829/shift-management-app"
   },
   {
     id: "3",
     title: "個人ポートフォリオサイト",
     description: "Reactで作成したポートフォリオサイトで、Vercelを使用して実際にユーザーがアクセス可能です。",
-    tags: ["React", "HTML", "CSS"],
+    tags: ["React", "JavaScript", "Vercel"],
     github: "https://github.com/khyiao0829/portfolio",
     demo: "https://portfolio-puce-ten-wevoujoub3.vercel.app",
   },
@@ -44,8 +44,8 @@ const tagIcons = {
   "MongoDB": <SiMongodb className="text-green-700" />,
   "OpenAI API": <SiOpenai className="text-purple-600" />,
   "Firebase": <SiFirebase className="text-yellow-500" />,
-  "HTML": <FaHtml5 className="text-orange-600" />,
-  "CSS": <FaCss3Alt className="text-blue-600" />,
+  "JavaScript": <SiJavascript className="text-yellow-400" /> ,
+  "Vercel": <SiVercel className="text-black" />,
   "Python": <SiPython color="#3776AB" />,
   "YOLOv8": <SiPytorch className="text-red-500" />,
   "Streamlit": <SiStreamlit className="text-pink-500" />,
@@ -88,29 +88,32 @@ function ProjectDetail() {
           ))}
         </div>
 
-        {/* GitHub 버튼 */}
-        {project.github && (
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block mb-4 px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-900 transition"
-          >
-            GitHub
-          </a>
-        )}
+        {/* github */}
+        <div className="flex gap-6 mb-4">
+          {project.github && (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-900 transition"
+            >
+              <FaGithub size={18} />
+              <span>GitHub</span>
+            </a>
+          )}
+          {/* demo */}
+          {project.demo && (
+            <a
+              href={project.demo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-900 transition"
+            >
+              デモサイトを見る
+            </a>
+          )}
+        </div>
 
-        {/* 데모 사이트 버튼 */}
-        {project.demo && (
-          <a
-            href={project.demo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block mb-12 ml-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition"
-          >
-            デモサイトを見る
-          </a>
-        )}
 
         {/* PDF 표시 */}
         {project.id === "1" && (
