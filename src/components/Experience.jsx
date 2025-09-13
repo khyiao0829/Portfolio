@@ -61,7 +61,7 @@ function Experience() {
               </span>
               <p className="text-lg font-semibold">🇯🇵アルバイト - 🌮ポカタコス中野店</p>
               <p className="text-gray-700">
-                接客を通じて日本語コミュニケーション力を強化
+                接客を通じて日本語コミュニケーション力を強化、チームワークを実践的に習得。
               </p>
             </li>
             <li>
@@ -70,7 +70,7 @@ function Experience() {
               </span>
               <p className="text-lg font-semibold">🇯🇵アルバイト - ☕️ドトールコーヒ東中野店</p>
               <p className="text-gray-700 mb-12">
-                接客を通じて日本語コミュニケーション力を強化し、チームワークを実践的に習得。
+                接客を通じて日本語コミュニケーション力を強化
               </p>
             </li>
             <li>
