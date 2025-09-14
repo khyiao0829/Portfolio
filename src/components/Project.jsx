@@ -4,8 +4,9 @@ import projects from "./ProjectData";
 
 function Projects() {
   return (
-    <section id="projects" className="py-16 px-6 min-h-screen w-screen">
-      <h2 className="text-3xl font-bold text-center mb-12">Projects</h2>
+    <section id="projects" className="py-16 px-6 min-h-screen w-screen text-center">
+  <p className="text-sm font-bold text-blue-500 mt-12 text-center">プロジェクト</p>
+  <h2 className="text-3xl font-bold text-center mb-12">Projects</h2>
       <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
         {projects.map((project) => (
           <motion.div
@@ -15,7 +16,6 @@ function Projects() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            {/* 카드 전체를 Link로 감싸기 */}
             <Link
               to={`/projects/${project.id}`}
               className="block bg-white rounded-xl overflow-hidden shadow hover:shadow-xl transition-shadow duration-300"
