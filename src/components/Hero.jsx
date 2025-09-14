@@ -2,23 +2,25 @@ import { motion } from "framer-motion";
 import ScrollDownArrow from "./ScrollDownArrow";
 
 function Hero() {
+  const hour = new Date().getHours();
+  const isDay = hour < 17; // 17시 이전이면 낮
+
+  const greeting = isDay ? "こんにちは," : "こんばんは,";
+
   return (
     <section
-    id="hero"
-    data-theme="dark"
-      className="relative h-screen w-screen flex flex-col justify-center items-center bg-cover bg-center text-white text-center px-4"
-      style={{ backgroundImage: "url('/background.png')" }} 
+      id="hero"
+      data-theme="dark"
+      className={`relative h-screen w-screen flex flex-col justify-center items-center bg-cover bg-center text-center px-4 transition-colors duration-500`}
     >
-      <div className="absolute inset-0 bg-black/40"></div>
-
       <div className="relative z-10">
         <motion.div
-          className="font-sans text-4xl sm:text-5xl md:text-6xl font-bold"
+          className="font-sans text-4xl sm:text-5xl md:text-6xl font-bold px-4 py-2 rounded"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          こんにちは,
+          {greeting}
         </motion.div>
 
         <motion.p
@@ -30,8 +32,8 @@ function Hero() {
           ITエンジニア KIM HA-YEONGです。
         </motion.p>
 
-        <motion.div
-          className="mt-6 md:mt-8 cursor-pointer"
+        <motion.button
+          className={`mt-6 md:mt-8 cursor-pointer px-6 py-2 rounded font-bold transition-colors duration-300 text-black`}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.7 }}
@@ -43,7 +45,7 @@ function Hero() {
           }}
         >
           <ScrollDownArrow />
-        </motion.div>
+        </motion.button>
       </div>
     </section>
   );

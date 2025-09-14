@@ -43,7 +43,11 @@ function Contact() {
           <p className="font-semibold">GitHub</p>
         </a>
       </div>
+      <footer className="pt-6 text-center text-sm text-black">
+      <p>© 2025 KIM HA-YEONG. All rights reserved.</p>
+      </footer>
     </section>
+    
   );
 }
 

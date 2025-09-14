@@ -7,7 +7,7 @@ const FadeInSection = ({ children }) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsVisible(entry.isIntersecting); // ✅ 보일 때 true, 안보일 때 false
+        setIsVisible(entry.isIntersecting); 
       },
       { threshold: 0.1 }
     );

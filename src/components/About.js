@@ -1,8 +1,6 @@
 function About() {
   return (
-    <section id="about" data-theme="light" className="bg-blue-50 py-20 px-6"
-    style={{ backgroundImage: "url('/about-bg.png')" }}
-    >
+    <section id="about" data-theme="light" className="bg-black-50 py-20 px-6">
 
       <div className="text-center mb-12">
       <p className="text-sm font-bold text-blue-500 mt-12">プロフィール</p>
