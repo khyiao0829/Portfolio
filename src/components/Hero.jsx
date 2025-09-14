@@ -3,7 +3,7 @@ import ScrollDownArrow from "./ScrollDownArrow";
 
 function Hero() {
   const hour = new Date().getHours();
-  const isDay = hour < 17; // 17시 이전이면 낮
+  const isDay = hour > 5 && hour < 17;
 
   const greeting = isDay ? "こんにちは," : "こんばんは,";
 
@@ -15,7 +15,7 @@ function Hero() {
     >
       <div className="relative z-10">
         <motion.div
-          className="font-sans text-4xl sm:text-5xl md:text-6xl font-bold px-4 py-2 rounded"
+          className="font-sans text-4xl sm:text-5xl md:text-6xl font-extrabold px-4 py-2 rounded"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -24,7 +24,7 @@ function Hero() {
         </motion.div>
 
         <motion.p
-          className="font-sans text-xl sm:text-2xl md:text-4xl font-bold mt-8 md:mt-12"
+          className="font-sans text-xl sm:text-2xl md:text-4xl font-extrabold mt-8 md:mt-12"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}

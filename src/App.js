@@ -7,6 +7,7 @@ import Projects from "./components/Project";
 import Contact from "./components/Contact";
 import ProjectDetail from "./components/ProjectDetail";
 import Experience from "./components/Experience";
+import Keywords from "./components/Keywords";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <div className="font-sans text-gray-900 scroll-smooth">
               <Hero />
               <About />
+              <Keywords />
               <Experience />
               <Projects />
               <Contact />

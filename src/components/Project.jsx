@@ -1,35 +1,62 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import projects from "./ProjectData";
+import projectData from "./ProjectData";
 
-function Projects() {
+export default function ProjectsSection() {
   return (
-    <section id="projects" className="py-16 px-6 min-h-screen w-screen text-center">
-  <p className="text-sm font-bold text-blue-500 mt-12 text-center">プロジェクト</p>
-  <h2 className="text-3xl font-bold text-center mb-12">Projects</h2>
-      <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-        {projects.map((project) => (
-          <motion.div
-            key={project.id}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+    <section
+      id="projects"
+      className="bg-gray-900 text-white px-8 md:px-16 lg:px-24 py-20"
+    >
+      <h2 className="text-5xl font-extrabold mb-12">
+        Projects<span className="text-gray-500">.</span>
+      </h2>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {projectData.map((p, index) => (
+          <Link
+            key={p.id}
+            to={`/projects/${p.id}`}
+            className="relative rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition block"
           >
-            <Link
-              to={`/projects/${project.id}`}
-              className="block bg-white rounded-xl overflow-hidden shadow hover:shadow-xl transition-shadow duration-300"
-            >
-              <div className="p-8">
-                <h3 className="text-2xl font-semibold">{project.title}</h3>
-                <p className="text-gray-600 mt-2">{project.description}</p>
-              </div>
-            </Link>
-          </motion.div>
+            {/* 카드 상단 */}
+            <div className="h-80 bg-gray-100 flex items-center justify-center">
+              <h3 className="text-2xl font-bold text-gray-700 text-center px-4">
+                {p.title}
+              </h3>
+            </div>
+
+            {/* 태그 */}
+            <div className="absolute top-4 right-4 flex flex-wrap gap-2">
+              {p.tags.map((tag, i) => {
+                if (typeof tag === "string") {
+                  return (
+                    <span
+                      key={i}
+                      className="flex items-center bg-white text-black px-2 py-1 rounded-full text-xs shadow"
+                    >
+                      {tag}
+                    </span>
+                  );
+                }
+                return (
+                  <span
+                    key={i}
+                    className="flex items-center bg-white text-black px-2 py-1 rounded-full text-xs shadow"
+                  >
+                    {tag.icon && <span className="mr-1">{tag.icon}</span>}
+                    <span>{tag.name}</span>
+                  </span>
+                );
+              })}
+            </div>
+
+            {/* 설명 */}
+            <div className="p-6">
+              <p className="text-white text-left">{p.description}</p>
+            </div>
+          </Link>
         ))}
       </div>
     </section>
   );
 }
-
-export default Projects;

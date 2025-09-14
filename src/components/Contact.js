@@ -8,8 +8,9 @@ function Contact() {
     >
       {/* 헤더 */}
       <div className="text-center mb-12">
-        <p className="text-sm font-bold text-blue-500">お問い合わせ</p>
-        <h2 className="text-4xl font-bold mb-4">Contact</h2>
+        <h2 className="text-5xl font-extrabold mb-12">
+        Contact<span className="text-gray-500">.</span>
+      </h2>
         <p className="text-gray-700">
           ご質問やお仕事のご依頼は、下記の方法でご連絡ください。
         </p>
@@ -24,7 +25,7 @@ function Contact() {
         >
           <FaEnvelope
             size={32}
-            className="text-gray-800 mb-3 transition-colors group-hover:text-blue-500"
+            className="text-gray-800 mb-3 transition-colors group-hover:text-gray-500"
           />
           <p className="font-semibold">Email</p>
         </a>
@@ -38,7 +39,7 @@ function Contact() {
         >
           <FaGithub
             size={32}
-            className="text-gray-800 mb-3 transition-colors group-hover:text-blue-500"
+            className="text-gray-800 mb-3 transition-colors group-hover:text-gray-500"
           />
           <p className="font-semibold">GitHub</p>
         </a>
