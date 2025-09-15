@@ -8,6 +8,7 @@ import Contact from "./components/Contact";
 import ProjectDetail from "./components/ProjectDetail";
 import Experience from "./components/Experience";
 import Keywords from "./components/Keywords";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
               <Experience />
               <Projects />
               <Contact />
+              <Footer />
             </div>
           }
         />
