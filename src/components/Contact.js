@@ -1,55 +1,122 @@
-import { FaGithub, FaEnvelope } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { useState } from "react";
+import emailjs from "emailjs-com";
 
-function Contact() {
+export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) =>
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .send(
+        "service_wek5lmq",   
+        "template_nj2kzoa",  
+        formData,
+        "ovcsABdPMQPsiJyB3"   
+      )
+      .then(() => {
+        alert("メールが正常に送信されました。✅");
+        setFormData({ name: "", email: "", message: "" });
+      })
+      .catch(() => {
+        alert("メールの送信に失敗しました。❌");
+      });
+  };
+
   return (
     <section
       id="contact"
-      className="max-w-4xl mx-auto p-12 my-24 min-h-screen flex flex-col justify-center"
+      className="min-h-screen flex flex-col justify-center items-center bg-white px-6 py-16"
     >
       {/* 헤더 */}
-      <div className="text-center mb-12">
-        <h2 className="text-5xl font-extrabold mb-12">
-        Contact<span className="text-gray-500">.</span>
-      </h2>
-        <p className="text-gray-700">
-          ご質問やお仕事のご依頼は、下記の方法でご連絡ください。
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="text-center mb-12"
+      >
+        <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+          Contact<span className="text-blue-500">.</span>
+        </h2>
+        <p className="text-gray-600">
+          貴社からのご連絡を心よりお待ち申し上げております。
         </p>
-      </div>
+      </motion.div>
 
-      {/* 연락 방법 */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-center">
-        {/* 이메일 */}
-        <a
-          href="mailto:khy__0829@naver.com"
-          className="group flex flex-col items-center p-6 bg-white rounded-xl shadow hover:shadow-lg transition"
-        >
-          <FaEnvelope
-            size={32}
-            className="text-gray-800 mb-3 transition-colors group-hover:text-gray-500"
+      {/* 폼 */}
+      <motion.form
+        onSubmit={handleSubmit}
+        className="w-full max-w-lg space-y-6"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      >
+        {/* Name */}
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Name
+          </label>
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            placeholder="Your name"
+            className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            required
           />
-          <p className="font-semibold">Email</p>
-        </a>
+        </div>
 
-        {/* GitHub */}
-        <a
-          href="https://github.com/khyiao0829"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group flex flex-col items-center p-6 bg-white rounded-xl shadow hover:shadow-lg transition"
-        >
-          <FaGithub
-            size={32}
-            className="text-gray-800 mb-3 transition-colors group-hover:text-gray-500"
+        {/* Email */}
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Email
+          </label>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="youremail@gmail.com"
+            className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            required
           />
-          <p className="font-semibold">GitHub</p>
-        </a>
-      </div>
-      <footer className="pt-6 text-center text-sm text-black">
-      <p>© 2025 KIM HA-YEONG. All rights reserved.</p>
-      </footer>
+        </div>
+
+        {/* Message */}
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Message
+          </label>
+          <textarea
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            rows="5"
+            placeholder="Write your message..."
+            className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            required
+          />
+        </div>
+
+        {/* Submit Button */}
+        <motion.button
+          type="submit"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="w-full py-3 rounded-lg bg-black text-white font-semibold shadow-md hover:bg-blue-700 transition-colors"
+        >
+          Send
+        </motion.button>
+      </motion.form>
     </section>
-    
   );
 }
-
-export default Contact;

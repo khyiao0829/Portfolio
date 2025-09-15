@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { FaGithub, FaEnvelope } from "react-icons/fa";
 
 export default function AboutSection() {
   return (
@@ -34,7 +35,25 @@ export default function AboutSection() {
           現在はワーキングホリデーで日本に滞在中。接客アルバイトを通して日本語での会話力やチームワークを鍛え、日本の職場文化にも自然に馴染んできました。  
           勉強してきた技術と日本での経験を組み合わせ、これからはエンジニアとして新しい価値を生み出していきたいと考えています。
         </p>
- 
+                  <div className="flex space-x-4 mt-4">
+          <a
+            href="https://github.com/khyiao0829"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub
+              size={32}
+              className="text-gray-800 transition-colors hover:text-gray-500"
+            />
+          </a>
+          <a href="mailto:khy__0829@naver.com">
+            <FaEnvelope
+              size={32}
+              className="text-gray-800 transition-colors hover:text-gray-500"
+            />
+          </a>
+        </div>
+
       </motion.div>
 
       {/* 오른쪽 이미지 */}
