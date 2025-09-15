@@ -29,7 +29,7 @@ const projectData = [
       { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
       { name: "Vercel", icon: <SiVercel className="text-black" /> },
     ],
-    image: "/portfolio.png", 
+    image: "/Portfolio.png", 
     github: "https://github.com/khyiao0829/portfolio",
     demo: "https://portfolio-puce-ten-wevoujoub3.vercel.app",
   },
