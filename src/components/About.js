@@ -4,7 +4,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="min-h-screen flex flex-col md:flex-row items-center justify-center px-8 md:px-16 lg:px-24 py-20 bg-white relative"
+      className="min-h-screen flex flex-col md:flex-row items-center justify-center px-8 md:px-16 lg:px-24 py-8 bg-white relative"
     >
        {/*<div className="absolute top-12 left-8">
     <h2 className="text-5xl font-extrabold text-gray-800"> / ABOUT</h2>
@@ -17,14 +17,14 @@ export default function AboutSection() {
         viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 0.8 }}
       >
-        <h2 className="text-5xl font-extrabold mb-12">
-        About<span className="text-gray-500">.</span>
+        <h2 className="text-5xl font-extrabold mb-8">
+        About<span className="text-blue-500">.</span>
       </h2>
-        <h2 className="text-5xl font-extrabold text-gray-500">
+        <h2 className="text-5xl font-extrabold text-black-500">
           Ha-yeong Kim
         </h2>
 
-        <p className="text-gray-700 leading-relaxed">
+        <p className="text-gray-700 leading-relaxed text-justify">
             韓国の4年制大学でソフトウェアを専攻し、
             Spring Boot、MySQL、ネットワーク、Computer Graphics、ウェブサーバープログラミングなど
             幅広く学びました。卒業研究ではChatGPT APIを活用した日本語学習アプリを約1年間かけて開発しました。

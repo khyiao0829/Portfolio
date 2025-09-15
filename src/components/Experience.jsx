@@ -1,12 +1,27 @@
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+
 export default function ExperienceSection() {
+  const [fromNav, setFromNav] = useState(false);
+
+  useEffect(() => {
+    if (window.location.hash === "/#experience") {
+      setFromNav(true);
+    }
+  }, []);
+
   return (
-    <section
+    <motion.section
       id="experience"
       className="min-h-screen bg-white px-8 md:px-16 lg:px-24 py-20"
+      initial={fromNav ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}  
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false, amount: 0.4 }}         
+      transition={{ duration: 0.8, ease: "easeOut" }}
     >
       {/* 섹션 타이틀 */}
       <h2 className="text-5xl font-extrabold mb-12">
-        Experience<span className="text-gray-500">.</span>
+        Experience<span className="text-blue-500">.</span>
       </h2>
 
       <div className="space-y-8">
@@ -70,6 +85,6 @@ export default function ExperienceSection() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

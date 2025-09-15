@@ -16,22 +16,12 @@ const projectData = [
       { name: "ExpressJS", icon: <SiExpress className="text-gray-700" /> },
       { name: "MongoDB", icon: <SiMongodb className="text-green-700" /> },
     ],
+    image: "/Newnihon.png", 
     github: "https://github.com/khyiao0829/Newnihon",
     pdf: "/nhk-learning.pdf",
   },
   {
     id: "2",
-    title: "バイトシフト調整Web/アプリサイト",
-    description: "アルバイトのシフトを調整する簡単なウェブアプリです。Firebase認証を含みます。",
-    tags: [
-      { name: "React", icon: <FaReact className="text-blue-500" /> },
-      { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
-      { name: "Firebase", icon: <SiFirebase className="text-yellow-500" /> },
-    ],
-    github: "https://github.com/khyiao0829/shift-management-app",
-  },
-  {
-    id: "3",
     title: "個人ポートフォリオサイト",
     description: "Reactで作成したポートフォリオサイトで、Vercelを使用して実際にユーザーがアクセス可能です。",
     tags: [
@@ -39,11 +29,12 @@ const projectData = [
       { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
       { name: "Vercel", icon: <SiVercel className="text-black" /> },
     ],
+    image: "/portfolio.png", 
     github: "https://github.com/khyiao0829/portfolio",
     demo: "https://portfolio-puce-ten-wevoujoub3.vercel.app",
   },
   {
-    id: "4",
+    id: "3",
     title: "Shibuya Crowd Analytics",
     description: "YOLOv8とStreamlitを活用したリアルタイム群衆カウントプロジェクト。",
     tags: [
@@ -52,8 +43,21 @@ const projectData = [
       { name: "Streamlit", icon: <SiStreamlit className="text-pink-500" /> },
       { name: "OpenCV", icon: <SiOpencv className="text-indigo-500" /> },
     ],
+    image: "/shibuya_demo.png", 
     github: "https://github.com/khyiao0829/Shibuya-Crowd-Analytics",
     demoImage: "/shibuya_demo.png",
+  },
+  {
+    id: "4",
+    title: "バイトシフト調整Web/App -制作中-",
+    description: "アルバイトのシフトを調整する簡単なウェブアプリです。Firebase認証を含みます。",
+    tags: [
+      { name: "React", icon: <FaReact className="text-blue-500" /> },
+      { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
+      { name: "Firebase", icon: <SiFirebase className="text-yellow-500" /> },
+    ],
+    image: "/ours_shift.png", 
+    github: "https://github.com/khyiao0829/shift-management-app",
   },
 ];
 
