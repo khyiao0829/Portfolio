@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
 const keywords = [
-  { jp: "指導力", en: "Leadership", desc: "私は小学校の時に副班長を務め、中学校では全校副会長を経験しました。さらに、ドッジボール部ではキャプテンとしてチームをまとめ、地区大会で準優勝に導いたことがあります。これらの経験を通じて、仲間を引っ張りながら目標に向かって努力する力を培いました。" },
+  { jp: "指導力", en: "Leadership", desc: "私は小学校の時に副班長を務め、中学校では全校副会長を経験しました。高校生の時には、学校の代表としてバドミントン大会に ダブルスで出場し、チームで協力して戦った経験があります。そして大学の卒業研究では、リーダーとしてプロジェクトを率いました。これらの経験を通じて、仲間をまとめながら目標に向かって努力する力を身につけました。"},
   { jp: "創造力", en: "Creativity", desc: "子どもの頃から物を作ることが好きで、現在もトイプロジェクトとして様々なものを開発しています。完成度の面ではまだ改善の余地がありますが、試行錯誤を重ねることでより質の高い成果物を生み出せるよう努力しています。" },
   { jp: "挑戦心", en: "Challenge", desc: "私は挑戦することが好きです。現在も日本に滞在し、言語や文化、そして新しい環境の中で様々なことに挑戦しています。趣味の面ではハーフマラソン完走を目指して週2回トレーニングを行っており、学習や開発の面では個人プロジェクトや新しい技術の習得を通じて常に自分の限界を広げています。これらの経験を通じて、挑戦から得られる達成感だけでなく、失敗から学ぶことの大切さも実感しています。" },
   { jp: "継続力", en: "Persistence", desc: "私の武器は「継続力」です。普段から小さなことでも習慣にできるよう努めています。些細な例ですが、懸垂ができるようになりたくて鉄棒を購入し、毎日欠かさずぶら下がることを続けました。その結果、2か月後にはついにプルアップができるようになりました。この経験から、できないことでも続ければ必ず可能になると実感し、すべてのことにおいて継続する姿勢を大切にしています。" },
@@ -13,7 +13,6 @@ export default function KeywordsSection() {
   const [openedIndex, setOpenedIndex] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
 
-  // 화면 크기 체크 → 모바일 여부 설정
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 640);
     handleResize();
@@ -50,7 +49,7 @@ export default function KeywordsSection() {
                 <div className="relative col-span-3 min-h-[2.5rem] sm:min-h-[3rem] md:h-16 overflow-hidden flex items-center">
                   {!isMobile ? (
                     <>
-                      {/* PC/태블릿: hover 시 슬라이드 */}
+                      {/* PC/태블릿 - hover 슬라이드 */}
                       <motion.span
                         animate={{ x: hoveredIndex === index ? "30%" : "0%" }}
                         transition={{ duration: 0.4, ease: "easeInOut" }}
@@ -69,7 +68,7 @@ export default function KeywordsSection() {
                     </>
                   ) : (
                     <>
-                      {/* 모바일: 클릭 시 전환 */}
+                      {/* 모바일 - 클릭 시 전환 */}
                       <span
                         className={`w-full text-xl sm:text-2xl md:text-4xl font-bold 
                           ${isMobile && openedIndex === index ? "text-blue-500" : ""}`}
