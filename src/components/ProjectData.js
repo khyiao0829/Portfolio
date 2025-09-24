@@ -1,6 +1,6 @@
 import { 
   SiOpenai, SiMongodb, SiExpress, SiFirebase, SiJavascript, 
-  SiPython, SiPytorch, SiStreamlit, SiOpencv, SiVercel 
+  SiPython, SiPytorch, SiStreamlit, SiOpencv, SiVercel, SiMysql
 } from "react-icons/si";
 import { FaReact, FaNodeJs } from "react-icons/fa";
 
@@ -49,6 +49,20 @@ const projectData = [
   },
   {
     id: "4",
+    title: "がんばれ！JLPT -制作中-",
+    description: "当初はOpenAI APIを活用し、日本語文章を自動で校正するアプリとして開発を開始しました。しかし、ユーザー層を調査した結果、JLPT試験対策を目的とする学習者が多いことが判明しました。その結果、需要に対応するためにJLPT学習用アプリへと方向性を変更し、現在はJLPTレベル別の単語帳機能を新たに実装いたしました。今後は過去問題機能や多様な学習機能の追加を予定しております。",
+    tags: [
+      { name: "OpenAI API", icon: <SiOpenai className="text-purple-600" /> },
+      { name: "React", icon: <FaReact className="text-blue-500" /> },
+      { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
+      { name: "Python", icon: <SiPython className="text-blue-600" /> },
+      { name: "MySQL", icon: <SiMysql className="text-blue-500" /> },
+    ],
+    image: "/Jlpt.png", 
+    github: "https://github.com/khyiao0829/Check_JP",
+  },
+  {
+    id: "5",
     title: "バイトシフト調整Web/App -制作中-",
     description: "アルバイトのシフトを調整する簡単なウェブアプリです。Firebase認証を含みます。",
     tags: [
