@@ -65,7 +65,7 @@ export default function AboutSection() {
         transition={{ duration: 0.8, delay: 0.3 }}
       >
         <img
-          src="/profile.jpg"
+          src="/profile.png"
           alt="Profile"
           className="rounded-2xl shadow-lg object-cover w-full h-auto border-2 border-gray"
         />
