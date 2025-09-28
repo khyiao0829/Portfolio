@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+
 
 export default function ExperienceSection() {
   const [fromNav, setFromNav] = useState(false);
@@ -52,7 +54,9 @@ export default function ExperienceSection() {
           </div>
           <div className="space-y-6">
             <div>
+              <Link to="ExperienceDetail">
               <p className="font-semibold text-gray-600 mb-2">韓国では何をやりましたか？</p>
+              </Link>
               <p className="font-semibold">🇯🇵アルバイト — 🌮ポカタコス中野店</p>
               <p className="text-gray-600">2025年4月 – 現在</p>
               <p className="text-gray-700">
