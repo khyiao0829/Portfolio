@@ -56,7 +56,6 @@ export default function AboutSection() {
 
       </motion.div>
 
-      {/* 오른쪽 이미지 */}
       <motion.div
         className="md:w-1/4 mt-12 md:mt-0 md:pl-16"
         initial={{ opacity: 0, x: 50 }}
@@ -64,6 +63,8 @@ export default function AboutSection() {
         viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 0.8, delay: 0.3 }}
       >
+
+        {/* 프로필 사진 */}
         <img
           src="/profile.png"
           alt="Profile"

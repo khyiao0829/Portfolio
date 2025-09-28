@@ -32,11 +32,11 @@ export default function ExperienceSection() {
           </div>
           <div className="space-y-6">
             <div>
-              <p className="font-semibold">大谷高等学校卒業🇰🇷</p>
+              <p className="font-semibold">🇰🇷大谷高等学校卒業</p>
               <p className="text-gray-600">2017年2月</p>
             </div>
             <div>
-              <p className="font-semibold">Sangmyung University🇰🇷</p>
+              <p className="font-semibold">🇰🇷Sangmyung University</p>
               <p className="text-gray-600">2019年3月 - 2024年2月</p>
               <p className="text-gray-700">
                 ソフトウェア学科専攻、卒業研究では日本語学習アプリを開発
@@ -52,6 +52,7 @@ export default function ExperienceSection() {
           </div>
           <div className="space-y-6">
             <div>
+              <p className="font-semibold text-gray-600 mb-2">韓国では何をやりましたか？</p>
               <p className="font-semibold">🇯🇵アルバイト — 🌮ポカタコス中野店</p>
               <p className="text-gray-600">2025年4月 – 現在</p>
               <p className="text-gray-700">
