@@ -2,11 +2,46 @@ import { useParams, useNavigate } from "react-router-dom";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { FaGithub } from "react-icons/fa";
 import projectData from "./ProjectData";
+import { useEffect, useState } from "react";
+import ReactMarkdown from "react-markdown";
+import "github-markdown-css/github-markdown.css";
 
 function ProjectDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
   const project = projectData.find((p) => p.id === id);
+
+  const [readme, setReadme] = useState("");
+
+  useEffect(() => {
+    if (["3", "4", "5"].includes(project?.id) && project.github) {
+      const repoPath = project.github.replace("https://github.com/", "");
+
+      async function fetchReadme() {
+        try {
+          // main 우선, 없으면 master 시도
+          let res = await fetch(
+            `https://raw.githubusercontent.com/${repoPath}/main/README.md`
+          );
+          if (!res.ok) {
+            res = await fetch(
+              `https://raw.githubusercontent.com/${repoPath}/master/README.md`
+            );
+          }
+          if (res.ok) {
+            const text = await res.text();
+            setReadme(text);
+          } else {
+            setReadme("README.md が見つかりませんでした。");
+          }
+        } catch (err) {
+          console.error("README fetch error:", err);
+        }
+      }
+
+      fetchReadme();
+    }
+  }, [project]);
 
   if (!project) {
     return (
@@ -31,7 +66,10 @@ function ProjectDetail() {
         {/* 기술 스택 */}
         <div className="flex flex-wrap gap-4 mb-6">
           {project.tags.map((tag, idx) => (
-            <div key={idx} className="flex items-center gap-2 px-3 py-2 bg-gray-100 rounded-lg shadow-sm">
+            <div
+              key={idx}
+              className="flex items-center gap-2 px-3 py-2 bg-gray-100 rounded-lg shadow-sm"
+            >
               {tag.icon}
               <span className="text-sm font-semibold">{tag.name}</span>
             </div>
@@ -68,10 +106,10 @@ function ProjectDetail() {
           <div className="mt-8">
             <h2 className="text-xl font-bold mb-4">アプリ紹介PDF</h2>
             <iframe
-            src={project.pdf}
-            title={`${project.title} PDF`}   
-            className="w-full h-[80vh] border rounded"
-          />
+              src={project.pdf}
+              title={`${project.title} PDF`}
+              className="w-full h-[80vh] border rounded"
+            />
           </div>
         )}
 
@@ -79,7 +117,44 @@ function ProjectDetail() {
         {project.demoImage && (
           <div className="mt-8">
             <h2 className="text-xl font-bold mb-4">デモ画像</h2>
-            <img src={project.demoImage} alt={project.title} className="rounded-lg shadow-md max-h-[500px] object-contain mx-auto" />
+            <img
+              src={project.demoImage}
+              alt={project.title}
+              className="rounded-lg shadow-md max-h-[500px] object-contain mx-auto"
+            />
+          </div>
+        )}
+
+        {/* README 표시 */}
+        {readme && (
+          <div className="mt-12">
+            <h2 className="text-xl font-bold mb-4">README</h2>
+            <div className="markdown-body">
+              <ReactMarkdown
+                components={{
+                  img: ({ node, ...props }) => {
+                    let src = props.src;
+                    if (src && !src.startsWith("http")) {
+                      const repoPath = project.github.replace(
+                        "https://github.com/",
+                        ""
+                      );
+                      src = `https://raw.githubusercontent.com/${repoPath}/main/${src}`;
+                    }
+                    return (
+                      <img
+                        {...props}
+                        src={src}
+                        alt={props.alt}
+                        className="max-w-full rounded-lg shadow-md"
+                      />
+                    );
+                  },
+                }}
+              >
+                {readme}
+              </ReactMarkdown>
+            </div>
           </div>
         )}
 

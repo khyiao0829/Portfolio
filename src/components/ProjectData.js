@@ -1,6 +1,6 @@
 import { 
   SiOpenai, SiMongodb, SiExpress, SiFirebase, SiJavascript, 
-  SiPython, SiPytorch, SiStreamlit, SiOpencv, SiVercel, SiMysql
+  SiPython, SiPytorch, SiStreamlit, SiOpencv, SiVercel, SiMysql, SiYoutube, SiHuggingface 
 } from "react-icons/si";
 import { FaReact, FaNodeJs } from "react-icons/fa";
 
@@ -34,7 +34,22 @@ const projectData = [
     demo: "https://portfolio-puce-ten-wevoujoub3.vercel.app",
   },
   {
-    id: "3",
+  id: "3",
+  title: "韓国旅行Vlog コメント感情分析",
+  description: "YouTube Data APIと自然言語処理(NLP)を用いて、韓国旅行Vlog動画のコメントを収集・分析するアプリケーションを開発しました。収集したコメントをポジティブ・ネガティブ・ニュートラルに分類し、棒グラフで可視化することで、視聴者の反応傾向をデータとして把握できる仕組みを実装しました。今後はWebアプリ化や他ジャンルの動画比較分析など、機能拡張を予定しています。",
+  tags: [
+    { name: "Python", icon: <SiPython className="text-blue-600" /> },
+    { name: "YouTube API", icon: <SiYoutube className="text-red-500" /> },
+    { name: "Hugging Face", icon: <SiHuggingface className="text-yellow-500" /> },
+    { name: "Matplotlib", icon: <SiPython className="text-green-600" /> },
+    { name: "NLP", icon: <SiOpenai className="text-purple-600" /> }
+  ],
+  image: "/youtuber.png", 
+  github: "https://github.com/khyiao0829/YoutubeDataAnalysis",
+}
+,
+  {
+    id: "4",
     title: "Shibuya Crowd Analytics",
     description: "YOLOv8とStreamlitを活用したリアルタイム群衆カウントプロジェクト。",
     tags: [
@@ -48,7 +63,7 @@ const projectData = [
     demoImage: "/shibuya_demo.png",
   },
   {
-    id: "4",
+    id: "5",
     title: "がんばれ！JLPT -制作中-",
     description: "当初はOpenAI APIを活用し、日本語文章を自動で校正するアプリとして開発を開始しました。しかし、ユーザー層を調査した結果、JLPT試験対策を目的とする学習者が多いことが判明しました。その結果、需要に対応するためにJLPT学習用アプリへと方向性を変更し、現在はJLPTレベル別の単語帳機能を新たに実装いたしました。今後は過去問題機能や多様な学習機能の追加を予定しております。",
     tags: [
@@ -62,7 +77,7 @@ const projectData = [
     github: "https://github.com/khyiao0829/Check_JP",
   },
   {
-    id: "5",
+    id: "6",
     title: "バイトシフト調整Web/App -制作中-",
     description: "アルバイトのシフトを調整する簡単なウェブアプリです。Firebase認証を含みます。",
     tags: [
