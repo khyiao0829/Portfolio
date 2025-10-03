@@ -4,6 +4,7 @@ import { FaGithub } from "react-icons/fa";
 import projectData from "./ProjectData";
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw"; // 🔥 HTML 허용 플러그인
 import "github-markdown-css/github-markdown.css";
 
 function ProjectDetail() {
@@ -19,7 +20,6 @@ function ProjectDetail() {
 
       async function fetchReadme() {
         try {
-          // main 우선, 없으면 master 시도
           let res = await fetch(
             `https://raw.githubusercontent.com/${repoPath}/main/README.md`
           );
@@ -101,60 +101,35 @@ function ProjectDetail() {
           )}
         </div>
 
-        {/* PDF */}
-        {project.pdf && (
-          <div className="mt-8">
-            <h2 className="text-xl font-bold mb-4">アプリ紹介PDF</h2>
-            <iframe
-              src={project.pdf}
-              title={`${project.title} PDF`}
-              className="w-full h-[80vh] border rounded"
-            />
-          </div>
-        )}
-
-        {/* Demo 이미지 */}
-        {project.demoImage && (
-          <div className="mt-8">
-            <h2 className="text-xl font-bold mb-4">デモ画像</h2>
-            <img
-              src={project.demoImage}
-              alt={project.title}
-              className="rounded-lg shadow-md max-h-[500px] object-contain mx-auto"
-            />
-          </div>
-        )}
-
         {/* README 표시 */}
         {readme && (
-          <div className="mt-12">
+          <div className="mt-8 markdown-body">
             <h2 className="text-xl font-bold mb-4">README</h2>
-            <div className="markdown-body">
-              <ReactMarkdown
-                components={{
-                  img: ({ node, ...props }) => {
-                    let src = props.src;
-                    if (src && !src.startsWith("http")) {
-                      const repoPath = project.github.replace(
-                        "https://github.com/",
-                        ""
-                      );
-                      src = `https://raw.githubusercontent.com/${repoPath}/main/${src}`;
-                    }
-                    return (
-                      <img
-                        {...props}
-                        src={src}
-                        alt={props.alt}
-                        className="max-w-full rounded-lg shadow-md"
-                      />
+            <ReactMarkdown
+              rehypePlugins={[rehypeRaw]} // 🔥 HTML 허용
+              components={{
+                img: ({ node, ...props }) => {
+                  let src = props.src;
+                  if (src && !src.startsWith("http")) {
+                    const repoPath = project.github.replace(
+                      "https://github.com/",
+                      ""
                     );
-                  },
-                }}
-              >
-                {readme}
-              </ReactMarkdown>
-            </div>
+                    src = `https://raw.githubusercontent.com/${repoPath}/main/${src}`;
+                  }
+                  return (
+                    <img
+                      {...props}
+                      src={src}
+                      alt={props.alt}
+                      className="max-w-[500px] mx-auto rounded-lg shadow-md my-4"
+                    />
+                  );
+                },
+              }}
+            >
+              {readme}
+            </ReactMarkdown>
           </div>
         )}
 
