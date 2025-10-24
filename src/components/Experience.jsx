@@ -67,8 +67,8 @@ export default function ExperienceSection() {
                 接客を通じて日本語コミュニケーション力を強化
               </p>
                <Link to="/experiencedetail">
-              <p className="font-semibold hover:underline cursor-pointer">
-                韓国の経験
+              <p className="font-semibold text-blue-600 hover:underline cursor-pointer mt-8">
+                ➜🇰🇷韓国の経験
               </p>
             </Link>
             </div>
