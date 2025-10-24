@@ -9,6 +9,7 @@ import ProjectDetail from "./components/ProjectDetail";
 import Experience from "./components/Experience";
 import Keywords from "./components/Keywords";
 import Footer from "./components/Footer";
+import ExperienceDetail from "./components/ExperienceDetail"
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         />
         {/* 상세 페이지는 별도 유지 */}
         <Route path="/projects/:id" element={<ProjectDetail />} />
+        <Route path="/experiencedetail" element={<ExperienceDetail />} />
       </Routes>
       <Analytics />
     </BrowserRouter>

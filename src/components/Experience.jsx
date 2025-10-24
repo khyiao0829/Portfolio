@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 export default function ExperienceSection() {
@@ -66,6 +66,11 @@ export default function ExperienceSection() {
               <p className="text-gray-700">
                 接客を通じて日本語コミュニケーション力を強化
               </p>
+               <Link to="/experiencedetail">
+              <p className="font-semibold hover:underline cursor-pointer">
+                韓国の経験
+              </p>
+            </Link>
             </div>
           </div>
         </div>
